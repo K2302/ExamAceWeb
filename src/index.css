@@ -4,13 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --body-font: "Comfortaa", sans-serif;
-}
-
 body {
   box-sizing: border-box;
-  font-family: var(--body-font);
+  font-family: "Comfortaa", sans-serif;
   scroll-behavior: smooth;
+}
+
+.max-width {
+  max-width: 1300px;
 }
