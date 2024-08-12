@@ -6,5 +6,11 @@
 
 
 :root {
-  font-family: "Comfortaa", sans-serif;
+  --body-font: "Comfortaa", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
