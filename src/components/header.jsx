@@ -10,7 +10,7 @@ const Header = () => {
             <div className="text-lg font-extrabold text-red-500">ExamAce</div>
           </div>
           <div className="h-16 w-0.5 bg-rose-500"></div>
-          <div className="h-16 flex flex-col justify-between items-center">
+          <div className="h-16 flex flex-col justify-center items-start">
             <div className="text-xl font-extrabold text-rose-500 underline">
               Joint Entrance Exam
             </div>
@@ -39,35 +39,35 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="sticky top-0 max-width mx-auto flex flex-row justify-between items-center">
-        <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
+      <div className="sticky z-10 top-0 max-width mx-auto my-1 py-3 flex flex-row justify-between items-center bg-white border-t-2 border-b-2">
+        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Home} alt="home" className="w-5 h-5" />
-            <div className="text-base font-extrabold">Home</div>
+            <div className="text-base text-slate-500">Home</div>
           </div>
         </div>
-        <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
+        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Course} alt="course" className="w-5 h-5" />
-            <div className="text-base font-extrabold">Course Content</div>
+            <div className="text-base text-slate-500">Course Content</div>
           </div>
         </div>
-        <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
+        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Rank} alt="leader" className="w-5 h-5" />
-            <div className="text-base font-extrabold">Leader Board</div>
+            <div className="text-base text-slate-500">Leader Board</div>
           </div>
         </div>
-        <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
+        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.News} alt="news" className="w-5 h-5" />
-            <div className="text-base font-extrabold">News | Blog</div>
+            <div className="text-base text-slate-500">News | Blog</div>
           </div>
         </div>
-        <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
+        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.About} alt="about" className="w-5 h-5" />
-            <div className="text-base font-extrabold">About</div>
+            <div className="text-base text-slate-500">About</div>
           </div>
         </div>
       </div>

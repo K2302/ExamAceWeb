@@ -1,4 +1,5 @@
 import Testimonial from "../../components/testimonial";
+import Trending from "../../components/trending";
 
 const Home = () => {
   const OPTIONS = { loop: true };
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <>
       <Testimonial slides={SLIDES} options={OPTIONS} />
+      <Trending />
     </>
   );
 };

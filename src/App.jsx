@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Header from "./components/header";
 import About from "./pages/home/about";
 import Course from "./pages/home/course";
+import Footer from "./components/footer";
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
         {/* The Outlet component will render the matched child route */}
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };

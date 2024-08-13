@@ -23,17 +23,24 @@ const Testimonial = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="max-w-[1280px] mx-auto my-5 flex flex-row justify-between items-center">
-      <div>left side</div>
+    <div className="max-w-[1280px] mx-auto my-5 flex flex-row justify-between">
+      <div className="flex flex-col justify-center">
+        <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-4xl font-bold">
+          India's #1
+        </div>
+        <div className="text-lg font-bold text-slate-500">
+          Platform For Free Mock Test | PYQ Test
+        </div>
+      </div>
       <section className="relative w-3/5">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {slides.map((index) => (
               <div
-                className="grow-0 shrink-0 w-full  transform translate-x-0 translate-y-0 translate-z-0 gap-0 m-0 p-0"
+                className="grow-0 shrink-0 transform translate-x-0 translate-y-0 translate-z-0 gap-0 m-0 p-0 rounded"
                 key={index}
               >
-                <img src={images.Slide2} alt="slides" className="rounded" />
+                <img src={images.Slide2} alt="slides" />
               </div>
             ))}
           </div>
@@ -49,35 +56,12 @@ const Testimonial = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`w-1.5 h-1.5 rounded-sm transition-colors duration-300 ${index === selectedIndex ? 'bg-red-500' : 'bg-slate-300'}`}
+              className={`w-1.5 h-1.5 rounded-sm transition-colors duration-300 ${
+                index === selectedIndex ? "bg-red-500" : "bg-slate-300"
+              }`}
             />
           ))}
         </div>
-
-        {/* <div className="embla__controls">
-          <div className="embla__buttons">
-            <PrevButton
-              onClick={onPrevButtonClick}
-              disabled={prevBtnDisabled}
-            />
-            <NextButton
-              onClick={onNextButtonClick}
-              disabled={nextBtnDisabled}
-            />
-          </div>
-
-          <div className="embla__dots">
-            {scrollSnaps.map((_, index) => (
-              <DotButton
-                key={index}
-                onClick={() => onDotButtonClick(index)}
-                className={"embla__dot".concat(
-                  index === selectedIndex ? " embla__dot--selected" : ""
-                )}
-              />
-            ))}
-          </div>
-        </div> */}
       </section>
     </div>
   );
