@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <div className="max-width mx-auto flex justify-between">
         <div className="flex flex-row gap-3 items-center">
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-center items-center">
             <img src={images.Logo} alt="logo" className="w-16 h-16" />
             <div className="text-lg font-extrabold text-red-500">ExamAce</div>
           </div>
@@ -39,7 +39,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="sticky top-0 max-width mx-auto p-3 flex flex-row justify-between items-center">
+      <div className="sticky top-0 max-width mx-auto flex flex-row justify-between items-center">
         <div className="flex-1 p-1 cursor-pointer hover:bg-gray-300 rounded">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Home} alt="home" className="w-5 h-5" />
