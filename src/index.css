@@ -17,7 +17,8 @@ body {
 /* scroll bar styles */
 
 body::-webkit-scrollbar {
-  width: 5px; /* width of the entire scrollbar */
+  
+  width: 0px; /* width of the entire scrollbar */
   border-radius: 5px;
 }
 

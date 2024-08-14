@@ -74,7 +74,7 @@ const Header = () => {
         <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.News} alt="news" className="w-5 h-5" />
-            <div className="text-base text-slate-500">News | Blog</div>
+            <div className="text-base text-slate-500">Blog / News</div>
           </div>
         </div>
         <div
