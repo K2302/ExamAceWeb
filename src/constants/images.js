@@ -14,6 +14,10 @@ import view from '../assets/icons/view.svg'
 import unlock from '../assets/icons/free.svg' 
 import location from '../assets/icons/location.svg'
 import call from '../assets/icons/call.svg'
+import register from '../assets/icons/register.svg'
+import email from '../assets/icons/email.svg'
+import time from '../assets/icons/time.svg'
+import study from '../assets/background/study.png'
 
 export default
     {
@@ -33,4 +37,8 @@ export default
         unlock,
         location,
         call,
+        register,
+        email,
+        time,
+        study
     }

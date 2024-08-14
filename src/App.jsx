@@ -5,6 +5,7 @@ import Header from "./components/header";
 import About from "./pages/home/about";
 import Course from "./pages/home/course";
 import Footer from "./components/footer";
+import Register from "./pages/home/register";
 
 const Layout = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="course" element={<Course />} />
+        <Route path="register" element={<Register />} />
       </Route>
     </Routes>
   );

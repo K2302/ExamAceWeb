@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import images from "../constants/images";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (route) => {
+    navigate(route);
+  };
+
   return (
     <>
       <div className="max-width mx-auto flex justify-between">
@@ -33,20 +40,26 @@ const Header = () => {
               Login
             </div>
             <div>|</div>
-            <div className="hover:text-rose-500 hover:underline delay-150 transition-transform">
+            <div onClick={() => handleClick('/register')} className="hover:text-rose-500 hover:underline delay-150 transition-transform">
               Register
             </div>
           </div>
         </div>
       </div>
-      <div className="sticky z-10 top-0 max-width mx-auto my-1 py-3 flex flex-row justify-between items-center bg-white border-t-2 border-b-2">
-        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
+      <div className="sticky z-10 top-0 max-width mx-auto mt-1 py-3 flex flex-row justify-between items-center bg-white border-t-2 border-b-2">
+        <div
+          className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300"
+          onClick={() => handleClick("/")}
+        >
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Home} alt="home" className="w-5 h-5" />
             <div className="text-base text-slate-500">Home</div>
           </div>
         </div>
-        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
+        <div
+          className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300"
+          onClick={() => handleClick("/course")}
+        >
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.Course} alt="course" className="w-5 h-5" />
             <div className="text-base text-slate-500">Course Content</div>
@@ -64,7 +77,10 @@ const Header = () => {
             <div className="text-base text-slate-500">News | Blog</div>
           </div>
         </div>
-        <div className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300">
+        <div
+          className="flex-1 py-3 cursor-pointer transition-colors duration-300 hover:bg-gray-300"
+          onClick={() => handleClick("/about")}
+        >
           <div className="flex flex-row justify-center items-center gap-3">
             <img src={images.About} alt="about" className="w-5 h-5" />
             <div className="text-base text-slate-500">About</div>
