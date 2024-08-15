@@ -19,6 +19,7 @@ import email from '../assets/icons/email.svg'
 import time from '../assets/icons/time.svg'
 import study from '../assets/background/study.png'
 import out from '../assets/icons/out.svg'
+import notification from '../assets/icons/notification.svg'
 
 export default
     {
@@ -42,5 +43,6 @@ export default
         email,
         time,
         study,
-        out
+        out,
+        notification
     }

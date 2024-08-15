@@ -12,7 +12,8 @@ import CourseDashboard from "./pages/dashboard/course";
 import LeaderBoardDashboard from "./pages/dashboard/leaderboard";
 import BlogDashboard from "./pages/dashboard/blog";
 import ProfileDasboard from "./pages/dashboard/profile";
-
+import SubjectDashboard from './pages/dashboard/subject'
+import Topbar from "./components/topbar"
 
 const HomeLayout = () => {
   return (
@@ -32,9 +33,14 @@ const DashboardLayout = () => {
       <div className="w-1/5 sticky top-0 left-0 h-screen border-l-2 border-r-2">
         <Sidebar />
       </div>
-      <main className="w-4/5">
-        <Outlet />
-      </main>
+      <div className="w-4/5 border-r-2">
+        <div className="w-full sticky top-0 left-0">
+          <Topbar />
+        </div>
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </div>
   )
 }
@@ -54,6 +60,7 @@ const App = () => {
         <Route path="leaderboard" element={<LeaderBoardDashboard />} />
         <Route path="blog" element={<BlogDashboard />} />
         <Route path="profile" element={<ProfileDasboard />} />
+        <Route path="subject" element={<SubjectDashboard />} />
       </Route>
     </Routes>
   );

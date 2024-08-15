@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     return (
         <div className="w-full h-full flex flex-col justify-between">
-            <div className="flex flex-row justify-center items-center gap-1.5 p-3 border-b-2">
+            <div className="h-16 flex flex-row justify-center items-center gap-1.5 p-3 border-b-2">
                 <img src={images.Logo} alt='logo' className='w-10 h-10' />
                 <div className="text-base text-rose-500 font-extrabold">ExamAce</div>
             </div>
@@ -36,7 +36,7 @@ const Sidebar = () => {
                     <div className="text-sm text-slate-500 font-extrabold">Profile</div>
                 </div>
             </div>
-            <div className="p-3 border-t-2 flex flex-row justify-center items-center gap-1.5 cursor-pointer">
+            <div className="h-16 p-3 border-t-2 flex flex-row justify-center items-center gap-1.5 cursor-pointer">
                 <img src={images.out} alt="signout" className="w-5 h-5" />
                 <div className="text-sm text-red-500 font-extrabold">Sign Out</div>
             </div>
