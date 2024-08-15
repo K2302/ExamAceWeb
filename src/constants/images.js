@@ -18,6 +18,7 @@ import register from '../assets/icons/register.svg'
 import email from '../assets/icons/email.svg'
 import time from '../assets/icons/time.svg'
 import study from '../assets/background/study.png'
+import out from '../assets/icons/out.svg'
 
 export default
     {
@@ -40,5 +41,6 @@ export default
         register,
         email,
         time,
-        study
+        study,
+        out
     }
