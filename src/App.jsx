@@ -40,6 +40,7 @@ const DashboardLayout = () => {
         <main>
           <Outlet />
         </main>
+        <Footer />
       </div>
     </div>
   )

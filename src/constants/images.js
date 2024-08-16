@@ -20,6 +20,8 @@ import time from '../assets/icons/time.svg'
 import study from '../assets/background/study.png'
 import out from '../assets/icons/out.svg'
 import notification from '../assets/icons/notification.svg'
+import dot from '../assets/icons/dot.svg'
+import check from '../assets/icons/check.svg'
 
 export default
     {
@@ -44,5 +46,7 @@ export default
         time,
         study,
         out,
-        notification
+        notification,
+        dot,
+        check
     }

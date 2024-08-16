@@ -2,7 +2,7 @@ import images from "../constants/images"
 
 const Topbar = () => {
     return (
-        <div className='h-16 border-b-2 flex flex-row justify-between items-center px-3'>
+        <div className='h-16 border-b-2 flex flex-row justify-between items-center px-3 bg-white'>
             <div className="flex flex-row items-center gap-3 border-2 rounded-md p-1.5">
                 <input type="text" placeholder="Search topics" className="text-sm text-slate-500 focus:outline-none" />
                 <img src={images.Search} alt="search" className='w-5 h-5' />
