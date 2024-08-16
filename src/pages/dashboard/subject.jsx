@@ -50,20 +50,41 @@ const SubjectDashboard = () => {
                 </div>
             </div>
             <div className='flex flex-row justify-start items-start mt-5'>
-                <div className='w-1/4 flex flex-row justify-between items-center pt-16'>
-                    <div className='w-1/6 border bg-slate-500'></div>
-                    <div className='text-sm text-slate-500 font-extrabold'>recomendation</div>
-                    <div className='w-1/6 border bg-slate-500'></div>
+                <div className='w-1/4 flex flex-col justify-start items-start pt-16'>
+                    <div className='w-full flex flex-row justify-start items-center gap-1.5'>
+                        <div className='w-1/12 border bg-slate-500'></div>
+                        <div className='text-sm text-slate-500 font-extrabold'>recomendation</div>
+                        <div className='flex-1 border bg-slate-500'></div>
+                    </div>
+                    <div className="w-full flex flex-col justify-center items-center">
+                        <div className="transition-transform duration-300 hover:scale-105 w-3/4 cursor-pointer flex flex-col gap-3 m-3">
+                            <img src={images.chemistry} alt="background" className="rounded" />
+                            <div className="text-base font-bold text-slate-500">
+                                Chemical Kinetics
+                            </div>
+                            <div className="flex flex-row justify-between items-center">
+                                <div className="flex flex-row justify-between items-center gap-1">
+                                    <div className="text-xs text-green-500 font-extrabold">free</div>
+                                    <img src={images.unlock} alt="free" className="w-3 h-3" />
+                                </div>
+                                <div className="flex flex-row justify-between items-center gap-1">
+                                    <img src={images.view} alt="views" className="w-3 h-3" />
+                                    <div className="text-xs text-slate-500">500</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className='w-3/4'>
                     <div className='w-full flex flex-row justify-between items-center cursor-pointer'>
-                        <div className='flex-1 flex flex-row justify-center items-center gap-1.5 border-b-2 border-b-blue-500 p-3'>
-                            <img src={images.News} alt='syllabus' className='w-5 h-5' />
-                            <div className='text-sm font-extrabold text-blue-500'>Chemistry Syllabus</div>
-                        </div>
                         <div className='flex-1 flex flex-row justify-center items-center gap-1.5 border-b-2 p-3'>
+                            <img src={images.News} alt='syllabus' className='w-5 h-5' />
+                            <div className='text-sm font-extrabold text-slate-700'>Chemistry Syllabus</div>
+                        </div>
+                        <div className='flex-1 flex flex-row justify-center items-center gap-1.5 border-b-2 border-b-blue-500 p-3'>
                             <img src={images.About} alt='syllabus' className='w-5 h-5' />
-                            <div className='text-sm font-extrabold text-slate-700'>Questions</div>
+                            <div className='text-sm font-extrabold text-blue-500'>Questions</div>
                         </div>
                         <div className='flex-1 flex flex-row justify-center items-center gap-1.5 border-b-2 p-3'>
                             <img src={images.notification} alt='syllabus' className='w-5 h-5' />
@@ -71,7 +92,72 @@ const SubjectDashboard = () => {
                         </div>
                     </div>
                     <div className='pt-5'>
-                        <Syllabus />
+                        <div className="w-full flex flex-row flex-wrap justify-between items-center">
+                            <div className="transition-transform duration-300 hover:scale-105 w-1/4 cursor-pointer flex flex-col gap-3 m-3">
+                                <img src={images.chemistry} alt="background" className="rounded" />
+                                <div className="text-base font-bold text-slate-500">
+                                    Chemical Kinetics
+                                </div>
+                                <div className="flex flex-row justify-between items-center">
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <div className="text-xs text-green-500 font-extrabold">free</div>
+                                        <img src={images.unlock} alt="free" className="w-3 h-3" />
+                                    </div>
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <img src={images.view} alt="views" className="w-3 h-3" />
+                                        <div className="text-xs text-slate-500">500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="transition-transform duration-300 hover:scale-105 w-1/4 cursor-pointer flex flex-col gap-3 m-3">
+                                <img src={images.chemistry} alt="background" className="rounded" />
+                                <div className="text-base font-bold text-slate-500">
+                                    Hydrogen
+                                </div>
+                                <div className="flex flex-row justify-between items-center">
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <div className="text-xs text-green-500 font-extrabold">free</div>
+                                        <img src={images.unlock} alt="free" className="w-3 h-3" />
+                                    </div>
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <img src={images.view} alt="views" className="w-3 h-3" />
+                                        <div className="text-xs text-slate-500">500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="transition-transform duration-300 hover:scale-105 w-1/4 cursor-pointer flex flex-col gap-3 m-3">
+                                <img src={images.chemistry} alt="background" className="rounded" />
+                                <div className="text-base font-bold text-slate-500">
+                                    Hydrogen
+                                </div>
+                                <div className="flex flex-row justify-between items-center">
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <div className="text-xs text-green-500 font-extrabold">free</div>
+                                        <img src={images.unlock} alt="free" className="w-3 h-3" />
+                                    </div>
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <img src={images.view} alt="views" className="w-3 h-3" />
+                                        <div className="text-xs text-slate-500">500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="transition-transform duration-300 hover:scale-105 w-1/4 cursor-pointer flex flex-col gap-3 m-3">
+                                <img src={images.chemistry} alt="background" className="rounded" />
+                                <div className="text-base font-bold text-slate-500">
+                                    Hydrogen
+                                </div>
+                                <div className="flex flex-row justify-between items-center">
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <div className="text-xs text-green-500 font-extrabold">free</div>
+                                        <img src={images.unlock} alt="free" className="w-3 h-3" />
+                                    </div>
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        <img src={images.view} alt="views" className="w-3 h-3" />
+                                        <div className="text-xs text-slate-500">500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
