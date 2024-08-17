@@ -16,6 +16,7 @@ import Topbar from "./components/topbar"
 import Test from "./pages/test/test"
 import TestSidebar from "./components/TestSidebar"
 import TestTopbar from "./components/TestTopbar"
+import Login from "./pages/home/login";
 
 const HomeLayout = () => {
   return (
@@ -74,6 +75,7 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="course" element={<Course />} />
         <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
       </Route>
       <Route path="dashboard" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
