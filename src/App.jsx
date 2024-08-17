@@ -1,5 +1,4 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import Test from "./components/test";
 import Home from "./pages/home";
 import Header from "./components/header";
 import About from "./pages/home/about";
@@ -14,6 +13,9 @@ import BlogDashboard from "./pages/dashboard/blog";
 import ProfileDasboard from "./pages/dashboard/profile";
 import SubjectDashboard from './pages/dashboard/subject'
 import Topbar from "./components/topbar"
+import Test from "./pages/test/test"
+import TestSidebar from "./components/TestSidebar"
+import TestTopbar from "./components/TestTopbar"
 
 const HomeLayout = () => {
   return (
@@ -46,6 +48,24 @@ const DashboardLayout = () => {
   )
 }
 
+const TestLayout = () => {
+  return (
+    <div className='w-[1280px] mx-auto flex flex-row'>
+      <div className='w-2/3 border-l-2'>
+        <div className='w-full sticky top-0 right-0'>
+          <TestTopbar />
+        </div>
+        <main>
+          <Outlet />
+        </main>
+      </div>
+      <div className="w-1/3 sticky top-0 right-0 h-screen border-l-2 border-r-2">
+        <TestSidebar />
+      </div>
+    </div>
+  )
+}
+
 const App = () => {
   return (
     <Routes>
@@ -63,6 +83,7 @@ const App = () => {
         <Route path="profile" element={<ProfileDasboard />} />
         <Route path="subject" element={<SubjectDashboard />} />
       </Route>
+      <Route path="test/:id" element={<Test />} />
     </Routes>
   );
 };
