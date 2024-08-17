@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-[1280px] h-16 mx-auto flex justify-between">
+      <div className="w-full h-16 flex justify-between">
         <div className="flex flex-row gap-3 items-center">
           <div className="flex flex-row justify-center items-center">
             <img src={images.Logo} alt="logo" className="w-12 h-12" />
@@ -54,7 +54,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="sticky z-10 top-0 w-[1280px] h-16 mx-auto flex flex-row justify-between items-center bg-white border-t-2 border-rose-50 border-b-2">
+      <div className="sticky z-10 top-0 w-full h-16 flex flex-row justify-between items-center bg-white border-t-2 border-rose-50 border-b-2">
         {
           RoutesObject.map((item) => (
             <div

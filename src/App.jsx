@@ -20,7 +20,7 @@ import Login from "./pages/home/login";
 
 const HomeLayout = () => {
   return (
-    <div>
+    <div className="w-[1280px] mx-auto">
       <Header />
       <main>
         <Outlet />
