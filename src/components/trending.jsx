@@ -33,7 +33,7 @@ const Trending = () => {
               viewport={{ once: true }}
               className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3"
               key={item.chapter}
-              onClick={() => handleClick('test/123')}
+              onClick={() => handleClick('/test/123')}
             >
               <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
               <div className="text-base font-bold text-slate-500">
