@@ -11,7 +11,7 @@ import Backward from '../assets/icons/backward.svg'
 import Forward from '../assets/icons/forward.svg'
 import chemistry from '../assets/chemistry/background.png'
 import view from '../assets/icons/view.svg'
-import unlock from '../assets/icons/free.svg' 
+import unlock from '../assets/icons/free.svg'
 import location from '../assets/icons/location.svg'
 import call from '../assets/icons/call.svg'
 import register from '../assets/icons/register.svg'
@@ -22,6 +22,7 @@ import out from '../assets/icons/out.svg'
 import notification from '../assets/icons/notification.svg'
 import dot from '../assets/icons/dot.svg'
 import check from '../assets/icons/check.svg'
+import Profile from '../assets/icons/profile.svg'
 
 export default
     {
@@ -32,6 +33,7 @@ export default
         About,
         Rank,
         Course,
+        Profile,
         Slide1,
         Slide2,
         Backward,

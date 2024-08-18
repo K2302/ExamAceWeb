@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import images from "../../constants/images";
 
-const About = () => {
+const LeaderBoard = () => {
     return (
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-col gap-5 justify-center items-center">
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
@@ -14,4 +15,4 @@ const About = () => {
     )
 }
 
-export default About
+export default LeaderBoard

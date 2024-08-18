@@ -1,4 +1,5 @@
-import images from "../constants/images";
+import { motion } from "framer-motion"
+import images from "../constants/images"
 
 const TrendingTopics = [
   { category: "Chemistry", chapter: "Chemical Kinetics", totalEnrollment: 3456 },
@@ -14,13 +15,17 @@ const TrendingTopics = [
 const Trending = () => {
   return (
     <div className="my-10">
-      <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-3xl font-extrabold m-3">
+      <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold m-3">
         Trending Topics
       </div>
       <div className="w-full flex flex-row flex-wrap justify-between items-center gap-3">
         {
           TrendingTopics.map((item) => (
-            <div className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { duration: 1.3 } }}
+              viewport={{ once: true }}
+              className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3">
               <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
               <div className="text-base font-bold text-slate-500">
                 {item.chapter}
@@ -35,7 +40,7 @@ const Trending = () => {
                   <div className="text-xs text-slate-500">{item.totalEnrollment}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))
         }
       </div>

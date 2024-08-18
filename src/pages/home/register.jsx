@@ -11,7 +11,7 @@ const Register = () => {
 
     return (
         <div className="h-[500px] bg-rose-100">
-            <div className="max-w-[1280px] mx-auto flex flex-row justify-between items-center h-full bg-center bg-no-repeat" style={{ backgroundImage: `url(${images.study})` }}>
+            <div className="flex flex-row justify-around items-center h-full bg-center bg-no-repeat" style={{ backgroundImage: `url(${images.study})` }}>
                 <div className="h-2/4 p-5 transition-colors duration-300 bg-white/50 flex flex-col justify-between items-start">
                     <div className='text-xl text-rose-500 font-extrabold cursor-pointer hover:underline'>2000+ users</div>
                     <div className='flex flex-row justify-start items-center gap-1.5'>
@@ -55,7 +55,7 @@ const Register = () => {
                             <input type="checkbox" className='w-3 h-3' />
                             <div className='text-xs text-slate-500'>I have and agree to the Platform Agrement</div>
                         </div>
-                        <div className='p-3 mt-1 w-1/2 bg-rose-300 rounded text-white font-extrabold text-center cursor-pointer' onClick={() => handleClick("/dashboard")}>register</div>
+                        <div className='p-3 mt-1 w-1/2 bg-rose-500 rounded text-white font-extrabold text-center cursor-pointer' onClick={() => handleClick("/dashboard")}>register</div>
                     </div>
                 </div>
             </div>

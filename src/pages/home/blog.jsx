@@ -1,6 +1,6 @@
 import images from "../../constants/images";
 
-const About = () => {
+const Blog = () => {
     return (
         <div className="flex flex-row justify-center items-center">
             <motion.div
@@ -14,4 +14,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Blog

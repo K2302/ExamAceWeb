@@ -4,23 +4,28 @@ import images from "../constants/images";
 const RoutesObject = [
   {
     icon: images.Home,
-    name: "Home"
+    name: "Home",
+    route: "/"
   },
   {
     icon: images.Course,
-    name: "Course"
+    name: "Course",
+    route: "/course"
   },
   {
     icon: images.Rank,
-    name: "Leaderboard"
+    name: "Leaderboard",
+    route: "/leaderboard"
   },
   {
     icon: images.News,
-    name: "Blog"
+    name: "Blog/News",
+    route: "/blog"
   },
   {
     icon: images.About,
-    name: "About"
+    name: "about",
+    route: "/about"
   }
 ]
 
@@ -59,7 +64,7 @@ const Header = () => {
           RoutesObject.map((item) => (
             <div
               className="flex-1 h-full flex justify-center items-center cursor-pointer transition-colors duration-300 hover:bg-rose-100"
-              onClick={() => handleClick("/")}
+              onClick={() => handleClick(item.route)}
               key={item.name}
             >
               <div className="flex flex-row justify-center items-center gap-3">

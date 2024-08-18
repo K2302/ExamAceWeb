@@ -49,10 +49,10 @@ const Card = () => {
                 </div>
                 <div className='flex flex-row justify-between items-center'>
                     <div className='w-2/5 p-1.5 text-center rounded bg-green-500 text-base text-white font-extrabold cursor-pointer'>
-                        Enroll Now
+                        Study Now
                     </div>
                     <div className="flex flex-row justify-between items-center gap-1">
-                        <div className="text-sm text-green-500 font-extrabold">free</div>
+                        <div className="text-sm text-rose-500 font-extrabold">free</div>
                         <img src={images.unlock} alt="free" className="w-5 h-5" />
                     </div>
                 </div>

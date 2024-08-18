@@ -17,6 +17,8 @@ import Test from "./pages/test/test"
 import TestSidebar from "./components/TestSidebar"
 import TestTopbar from "./components/TestTopbar"
 import Login from "./pages/home/login";
+import LeaderBoard from "./pages/home/leaderboard";
+import Blog from "./pages/home/blog";
 
 const HomeLayout = () => {
   return (
@@ -74,6 +76,8 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="course" element={<Course />} />
+        <Route path="leaderboard" element={<LeaderBoard />} />
+        <Route path="blog" element={<Blog />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
       </Route>
