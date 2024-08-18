@@ -1,8 +1,11 @@
+import Trending from "../../components/trending"
+
 const Dashboard = () => {
     return (
-        <div className='w-full h-screen bg-rose-50'>
+        <div>
+            <Trending />
         </div>
     )
-} 
+}
 
 export default Dashboard

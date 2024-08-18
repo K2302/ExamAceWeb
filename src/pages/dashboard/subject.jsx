@@ -1,18 +1,23 @@
-import Path from '../../components/path'
+import { useParams } from 'react-router-dom'
 import Syllabus from '../../components/syllabus'
 import images from '../../constants/images'
 
 const SubjectDashboard = () => {
+    const { id } = useParams()
     return (
         <div className='m-5 flex flex-col gap-5'>
-            <Path />
+            <div className="flex flex-row justify-start items-center gap-3">
+                <div className="text-md text-slate-500">course</div>
+                <div className="text-xl text-slate-300"> {`>`} </div>
+                <div className="text-md text-slate-500">{id}</div>
+            </div>
             <div className='flex flex-row justify-start items-start'>
                 <div className='w-1/2 h-64'>
                     <img src={images.chemistry} alt="subject" className='h-full w-full' />
                 </div>
                 <div className='w-1/2 h-64 pl-5 flex flex-col justify-between items-start'>
                     <div className='flex flex-col gap-1.5'>
-                        <div className='text-xl text-slate-700 font-extrabold'>Chemistry Previous Year Questions</div>
+                        <div className='text-xl text-slate-700 font-extrabold'>{id} Previous Year Questions</div>
                         <div className='text-sm text-slate-500'>chapter wise previous years chemistry questions since 2000. Every questions organize according to their related topics </div>
                     </div>
                     <div className='flex flex-col gap-1.5'>

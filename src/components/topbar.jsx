@@ -12,7 +12,7 @@ const Topbar = () => {
                     <img src={images.notification} alt='notification' className="w-5 h-5" />
                 </div>
                 <div className="p-2 rounded-full bg-rose-300 flex flex-row justify-center items-center">
-                    <img src={images.register} alt='profile' className="w-5 h-5" />
+                    <img src={images.Profile} alt='profile' className="w-5 h-5" />
                 </div>
             </div>
         </div>

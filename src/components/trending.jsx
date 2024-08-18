@@ -25,7 +25,9 @@ const Trending = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 1.3 } }}
               viewport={{ once: true }}
-              className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3">
+              className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3"
+              key={item.chapter}
+            >
               <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
               <div className="text-base font-bold text-slate-500">
                 {item.chapter}

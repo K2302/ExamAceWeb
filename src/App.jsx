@@ -19,6 +19,7 @@ import TestTopbar from "./components/TestTopbar"
 import Login from "./pages/home/login";
 import LeaderBoard from "./pages/home/leaderboard";
 import Blog from "./pages/home/blog";
+import PYQ from "./pages/dashboard/pyq";
 
 const HomeLayout = () => {
   return (
@@ -51,33 +52,15 @@ const DashboardLayout = () => {
   )
 }
 
-const TestLayout = () => {
-  return (
-    <div className='w-[1280px] mx-auto flex flex-row'>
-      <div className='w-2/3 border-l-2'>
-        <div className='w-full sticky top-0 right-0'>
-          <TestTopbar />
-        </div>
-        <main>
-          <Outlet />
-        </main>
-      </div>
-      <div className="w-1/3 sticky top-0 right-0 h-screen border-l-2 border-r-2">
-        <TestSidebar />
-      </div>
-    </div>
-  )
-}
-
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomeLayout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
         <Route path="course" element={<Course />} />
         <Route path="leaderboard" element={<LeaderBoard />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="about" element={<About />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
       </Route>
@@ -87,7 +70,8 @@ const App = () => {
         <Route path="leaderboard" element={<LeaderBoardDashboard />} />
         <Route path="blog" element={<BlogDashboard />} />
         <Route path="profile" element={<ProfileDasboard />} />
-        <Route path="subject" element={<SubjectDashboard />} />
+        <Route path="course/pyq" element={<PYQ />} />
+        <Route path="course/:id" element={<SubjectDashboard />} />
       </Route>
       <Route path="test/:id" element={<Test />} />
     </Routes>

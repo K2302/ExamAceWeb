@@ -1,4 +1,5 @@
-import images from "../../constants/images";
+import { motion } from "framer-motion"
+import images from "../../constants/images"
 
 const About = () => {
     return (
