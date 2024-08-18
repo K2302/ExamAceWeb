@@ -52,7 +52,7 @@ const Course = () => {
             </div>
           </div>
           <Link
-            to={`dashboard/course/pyq`}
+            to={`/dashboard/course/pyq`}
             className="p-3 w-64 text-center rounded bg-rose-400 text-sm text-white font-extrabold cursor-pointer">
             Study Now
           </Link>
