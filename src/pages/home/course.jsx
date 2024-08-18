@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import images from "../../constants/images";
+import { Link } from "react-router-dom";
 
 const SubjectsDetails = [
   {
     subject: "Chemistry",
+    route: 'chemistry',
     chapters: 22,
     questions: 1500,
     mockTests: 100,
@@ -11,6 +13,7 @@ const SubjectsDetails = [
   },
   {
     subject: "Physics",
+    route: 'physics',
     chapters: 20,
     questions: 1400,
     mockTests: 80,
@@ -18,6 +21,7 @@ const SubjectsDetails = [
   },
   {
     subject: "Math",
+    route: 'math',
     chapters: 25,
     questions: 1600,
     mockTests: 120,
@@ -47,9 +51,11 @@ const Course = () => {
               <div className="text-base font-extrabold text-slate-500">100+ Mock Test</div>
             </div>
           </div>
-          <div className="p-3 w-64 text-center rounded bg-rose-500 text-sm text-white font-extrabold cursor-pointer">
+          <Link
+            to={`dashboard/course/pyq`}
+            className="p-3 w-64 text-center rounded bg-rose-400 text-sm text-white font-extrabold cursor-pointer">
             Study Now
-          </div>
+          </Link>
         </div>
       </motion.div>
       <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold mt-5">Topic Wise Content</div>
@@ -105,9 +111,11 @@ const Course = () => {
                   </div>
                 </div>
                 <div className='flex flex-row justify-between items-center'>
-                  <div className='py-3 px-10 text-center rounded bg-rose-500 text-sm text-white font-extrabold cursor-pointer'>
+                  <Link
+                    to={`/dashboard/course/${item.route}`}
+                    className='py-3 px-10 text-center rounded bg-rose-400 text-sm text-white font-extrabold cursor-pointer'>
                     Study Now
-                  </div>
+                  </Link>
                   <div className="flex flex-row justify-between items-center gap-1">
                     <div className="text-sm text-lime-500 font-extrabold">free</div>
                     <img src={images.unlock} alt="free" className="w-5 h-5" />

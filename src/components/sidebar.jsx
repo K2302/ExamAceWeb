@@ -1,5 +1,5 @@
 import images from "../constants/images"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -10,9 +10,9 @@ const Sidebar = () => {
 
     return (
         <div className="w-full h-full flex flex-col justify-between">
-            <div className="h-16 flex flex-row justify-center items-center gap-1.5 p-3 border-b-2">
+            <Link to={`/`} className="h-16 flex flex-row justify-center items-center gap-1.5 p-3 border-b-2">
                 <img src={images.Logo} alt='logo' className='w-10 h-10' />
-            </div>
+            </Link>
             <div className="flex-1 p-3">
                 <div className="flex flex-row justify-start items-center p-3 gap-3 cursor-pointer my-3 transition-transform duration-300 hover:scale-105" onClick={() => handleClick('/dashboard')}>
                     <img src={images.Home} alt="dashboard" className="w-5 h-5" />

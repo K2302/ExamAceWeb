@@ -23,6 +23,7 @@ import notification from '../assets/icons/notification.svg'
 import dot from '../assets/icons/dot.svg'
 import check from '../assets/icons/check.svg'
 import Profile from '../assets/icons/profile.svg'
+import Notice from '../assets/icons/notice.svg'
 
 export default
     {
@@ -50,5 +51,6 @@ export default
         out,
         notification,
         dot,
-        check
+        check,
+        Notice
     }
