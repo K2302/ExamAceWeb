@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import images from "../constants/images"
+import { useNavigate } from "react-router-dom";
 
 const TrendingTopics = [
   { category: "Chemistry", chapter: "Chemical Kinetics", totalEnrollment: 3456 },
@@ -13,6 +14,11 @@ const TrendingTopics = [
 ];
 
 const Trending = () => {
+  const navigate = useNavigate()
+  
+  const handleClick = (route) => {
+    navigate(route)
+  }
   return (
     <div className="my-10">
       <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold m-3">
@@ -27,6 +33,7 @@ const Trending = () => {
               viewport={{ once: true }}
               className="transition-transform duration-300 hover:scale-105 w-1/5 h-48 cursor-pointer flex flex-col gap-3 m-3"
               key={item.chapter}
+              onClick={() => handleClick('test/123')}
             >
               <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
               <div className="text-base font-bold text-slate-500">

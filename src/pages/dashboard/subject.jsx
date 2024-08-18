@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Syllabus from '../../components/syllabus'
 import images from '../../constants/images'
 import Recomendation from '../../components/recomendation'
@@ -59,51 +59,54 @@ const SectionData = [
 ]
 
 
-const SyllabusSection = () => (
-    <Syllabus />
-)
-
-const LessionSection = () => (
-    <div className="w-full flex flex-row flex-wrap justify-between items-center gap-3">
-        {
-            LessionData.map((item) => (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, transition: { duration: 1.3 } }}
-                    viewport={{ once: true }}
-                    className="transition-transform duration-300 hover:scale-105 w-5/12 h-64 cursor-pointer flex flex-col gap-3 m-3"
-                    key={item.chapter}
-                >
-                    <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
-                    <div className="text-base font-bold text-slate-500">
-                        {item.chapter}
-                    </div>
-                    <div className="flex flex-row justify-between items-center">
-                        <div className="flex flex-row justify-between items-center gap-1">
-                            <div className="text-xs text-green-500 font-extrabold">free</div>
-                            <img src={images.unlock} alt="free" className="w-3 h-3" />
-                        </div>
-                        <div className="flex flex-row justify-between items-center gap-1">
-                            <img src={images.view} alt="views" className="w-3 h-3" />
-                            <div className="text-xs text-slate-500">{item.totalEnrollment}</div>
-                        </div>
-                    </div>
-                </motion.div>
-            ))
-        }
-    </div>
-)
-
-const AnnouncementSection = () => (
-    <div className='flex justify-center items-center'>
-        <img src={images.Logo} className='w-24 h-24' />
-    </div>
-)
-
-
 const SubjectDashboard = () => {
+    const navigate = useNavigate()
     const { id } = useParams()
     const [selectedSection, setSelectedSection] = useState('syllabus')
+
+    const SyllabusSection = () => (
+        <Syllabus />
+    )
+
+
+
+    const AnnouncementSection = () => (
+        <div className='flex justify-center items-center'>
+            <img src={images.Logo} className='w-24 h-24' />
+        </div>
+    )
+
+    const LessionSection = () => (
+        <div className="w-full flex flex-row flex-wrap justify-between items-center gap-3">
+            {
+                LessionData.map((item) => (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1, transition: { duration: 1.3 } }}
+                        viewport={{ once: true }}
+                        className="transition-transform duration-300 hover:scale-105 w-5/12 h-64 cursor-pointer flex flex-col gap-3 m-3"
+                        key={item.chapter}
+                        onClick={() => handleClick('/test/123')}
+                    >
+                        <img src={images.chemistry} alt="background" className="rounded w-full h-32" />
+                        <div className="text-base font-bold text-slate-500">
+                            {item.chapter}
+                        </div>
+                        <div className="flex flex-row justify-between items-center">
+                            <div className="flex flex-row justify-between items-center gap-1">
+                                <div className="text-xs text-green-500 font-extrabold">free</div>
+                                <img src={images.unlock} alt="free" className="w-3 h-3" />
+                            </div>
+                            <div className="flex flex-row justify-between items-center gap-1">
+                                <img src={images.view} alt="views" className="w-3 h-3" />
+                                <div className="text-xs text-slate-500">{item.totalEnrollment}</div>
+                            </div>
+                        </div>
+                    </motion.div>
+                ))
+            }
+        </div>
+    )
 
     const renderContent = () => {
         switch (selectedSection) {
@@ -118,6 +121,10 @@ const SubjectDashboard = () => {
         }
     }
 
+    const handleClick = (route) => {
+        navigate(route)
+    }
+
     return (
         <div className='m-5 flex flex-col gap-5'>
             <div className="flex flex-row justify-start items-center gap-3">
@@ -125,7 +132,11 @@ const SubjectDashboard = () => {
                 <div className="text-xl text-slate-300"> {`>`} </div>
                 <div className="text-md text-slate-500">{id}</div>
             </div>
-            <div className='flex flex-row justify-start items-start'>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { duration: 1.3 } }}
+                viewport={{ once: true }}
+                className='flex flex-row justify-start items-start'>
                 <div className='w-1/2 h-64'>
                     <img src={images.chemistry} alt="subject" className='h-full w-full rounded' />
                 </div>
@@ -167,7 +178,7 @@ const SubjectDashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='flex flex-row justify-start items-start mt-5'>
                 <div className='w-1/4 flex flex-col justify-start items-start pt-16'>
                     <div className='w-full flex flex-row justify-start items-center gap-1.5'>
