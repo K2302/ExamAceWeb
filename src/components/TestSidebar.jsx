@@ -9,7 +9,22 @@ const TestSidebar = ({ answerStatus, setCurrentQuestionIndex }) => {
 
 
     return (
-        <div className='flex flex-col justify-start items-center h-full gap-5'>
+        <div className='flex flex-col justify-center items-center h-full gap-5'>
+            <div className="w-full px-3 flex flex-col justify-start items-start gap-3">
+                <div className="w-full flex flex-row justify-between items-center">
+                    <div className='w-9 h-9 flex justify-center items-center bg-slate-300 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => !status.answered && !status.markedForReview).length}</div>
+                    <div className="text-sm text-slate-500 font-extrabold">unanswered</div>
+                </div>
+                <div className="w-full flex flex-row justify-between items-center">
+                    <div className='w-9 h-9 flex justify-center items-center bg-yellow-500 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => status.markedForReview).length}</div>
+                    <div className="text-sm text-slate-500 font-extrabold">Reviewed</div>
+                </div>
+                <div className="w-full flex flex-row justify-between items-center">
+                    <div className='w-9 h-9 flex justify-center items-center bg-green-500 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => status.answered).length}</div>
+                    <div className="text-sm text-slate-500 font-extrabold">Answered</div>
+                </div>
+            </div>
+            <div className="w-full border-t-2"></div>
             <div className="flex flex-row flex-wrap justify-start items-start gap-1.5 p-3">
                 {
                     answerStatus.map((status, index) => {
@@ -33,21 +48,6 @@ const TestSidebar = ({ answerStatus, setCurrentQuestionIndex }) => {
                         );
                     })
                 }
-            </div>
-            <div className="w-full border-t-2"></div>
-            <div className="w-full px-3 flex flex-col justify-start items-start gap-3">
-                <div className="w-full flex flex-row justify-between items-center">
-                    <div className='w-9 h-9 flex justify-center items-center bg-slate-300 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => !status.answered && !status.markedForReview).length}</div>
-                    <div className="text-sm text-slate-500 font-extrabold">unanswered</div>
-                </div>
-                <div className="w-full flex flex-row justify-between items-center">
-                    <div className='w-9 h-9 flex justify-center items-center bg-yellow-500 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => status.markedForReview).length}</div>
-                    <div className="text-sm text-slate-500 font-extrabold">Reviewed</div>
-                </div>
-                <div className="w-full flex flex-row justify-between items-center">
-                    <div className='w-9 h-9 flex justify-center items-center bg-green-500 text-white text-lg font-extrabold rounded'>{answerStatus.filter(status => status.answered).length}</div>
-                    <div className="text-sm text-slate-500 font-extrabold">Answered</div>
-                </div>
             </div>
             <div className="w-full border-t-2"></div>
             <div
