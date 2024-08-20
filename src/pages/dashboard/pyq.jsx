@@ -71,8 +71,8 @@ const PYQ = () => {
 
     const FiteredData = Data.filter((item) => {
         const yearMatch = item.date.startsWith(selectedYear)
-        const attemptMatch = selectedAttempt === 1
-        return yearMatch && attemptMatch
+        // const attemptMatch = selectedAttempt === 1
+        return yearMatch
     })
 
 
