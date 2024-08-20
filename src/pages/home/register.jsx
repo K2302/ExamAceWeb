@@ -19,7 +19,7 @@ const Register = () => {
                         <div className='text-xs text-slate-500'>14-07-2024 : 12:05</div>
                     </div>
                 </div>
-                <div className="w-4/12 h-5/6 bg-white/55 flex flex-col justify-between">
+                <div className="w-4/12 h-5/6 bg-white/95 flex flex-col justify-between">
                     <div className='flex flex-row justify-between items-center p-3 border-b-2'>
                         <div className='flex flex-row justify-center items-center gap-1.5'>
                             <img src={images.register} alt='register' className='w-6 h-6' />

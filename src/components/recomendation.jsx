@@ -2,10 +2,10 @@ import { motion } from "framer-motion"
 import images from "../constants/images"
 
 const RecomendedTopics = [
-    { category: "Chemistry", chapter: "Chemical Kinetics", totalEnrollment: 3456 },
-    { category: "Math", chapter: "Functions", totalEnrollment: 2890 },
-    { category: "Physics", chapter: "Electrostatics", totalEnrollment: 3124 },
-    { category: "Chemistry", chapter: "Coordination Compounds", totalEnrollment: 2750 },
+    { category: "Chemistry", chapter: "Chemical Kinetics", totalEnrollment: 3456, image: images.ChemistryBackground, testId: '123' },
+    { category: "Math", chapter: "Functions", totalEnrollment: 2890, image: images.MathBackground, testId: '123' },
+    { category: "Physics", chapter: "Electrostatics", totalEnrollment: 3124, image: images.PhysicsBackground, testId: '123' },
+    { category: "Chemistry", chapter: "Coordination Compounds", totalEnrollment: 2750, image: images.ChemistryBackground, testId: '123' },
 ];
 
 const Recomendation = () => {
@@ -19,8 +19,11 @@ const Recomendation = () => {
                         viewport={{ once: true }}
                         className="transition-transform duration-300 hover:scale-105 w-5/6 h-48 cursor-pointer flex flex-col gap-3 m-3"
                         key={item.chapter}
+                        onClick={() => handleClick(`/test/${item.testId}`)}
                     >
-                        <img src={images.chemistry} alt="background" className="rounded" />
+                        <div className='w-full h-32'>
+                            <img src={item.image} alt="background" className="rounded w-full h-full object-cover" />
+                        </div>
                         <div className="text-base font-bold text-slate-500">
                             {item.chapter}
                         </div>

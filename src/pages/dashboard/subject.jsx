@@ -46,7 +46,7 @@ const LessionData = [
 const SectionData = [
     {
         name: 'syllabus',
-        icon: images.Forward
+        icon: images.List
     },
     {
         name: 'lession',

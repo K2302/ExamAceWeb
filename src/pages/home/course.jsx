@@ -10,6 +10,7 @@ const SubjectsDetails = [
     questions: 1500,
     mockTests: 100,
     enrollments: 1200,
+    image: images.ChemistryBackground
   },
   {
     subject: "Physics",
@@ -18,6 +19,7 @@ const SubjectsDetails = [
     questions: 1400,
     mockTests: 80,
     enrollments: 1100,
+    image: images.PhysicsBackground
   },
   {
     subject: "Math",
@@ -26,6 +28,7 @@ const SubjectsDetails = [
     questions: 1600,
     mockTests: 120,
     enrollments: 1300,
+    image: images.MathBackground
   }
 ];
 
@@ -39,7 +42,7 @@ const Course = () => {
         whileInView={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
         viewport={{ once: true }}
         className="h-72 flex flex-row justify-start items-center gap-5">
-        <img src={images.chemistry} alt='previous' className="w-6/12 h-full rounded" />
+        <img src={images.PYQ} alt='previous' className="w-6/12 h-full rounded" />
         <div className="h-full flex flex-col justify-between items-start">
           <div className="flex flex-col justify-start items-start gap-3">
             <div className="flex flex-row justify-start items-center gap-3">
@@ -65,9 +68,11 @@ const Course = () => {
         viewport={{ once: true }}
         className="flex flex-row justify-between">
         {
-          SubjectsDetails.map((item) => (
-            <div className="w-[400px] p-3 flex flex-col gap-3 bg-slate-100">
-              <img src={images.chemistry} alt="header" className='w-full rounded-t' />
+          SubjectsDetails.map((item, index) => (
+            <div key={index} className="w-[400px] p-3 flex flex-col gap-3 bg-slate-100">
+              <div className="w-full h-48">
+                <img src={item.image} alt="header" className='w-full h-full object-cover rounded-t' />
+              </div>
               <div>
                 <div className='text-xl font-extrabold border-b-2 my-3'>{item.subject}</div>
                 <div className='flex flex-col gap-3'>

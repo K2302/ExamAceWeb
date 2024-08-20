@@ -1,9 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
 const TestSidebar = ({ answerStatus, setCurrentQuestionIndex }) => {
+    const navigate = useNavigate()
+
+    const handleClick = (route) => {
+        navigate(route)
+    }
+
 
     return (
-        <div className='flex flex-col mt-16 justify-start items-center h-full gap-5'>
+        <div className='flex flex-col justify-start items-center h-full gap-5'>
             <div className="flex flex-row flex-wrap justify-start items-start gap-1.5 p-3">
                 {
                     answerStatus.map((status, index) => {
@@ -44,7 +50,9 @@ const TestSidebar = ({ answerStatus, setCurrentQuestionIndex }) => {
                 </div>
             </div>
             <div className="w-full border-t-2"></div>
-            <div className="w-1/2 p-3 text-sm text-white font-extrabold bg-rose-400 rounded flex justify-center items-center cursor-pointer">Submit</div>
+            <div
+                onClick={() => handleClick('/dashboard')}
+                className="w-1/2 p-3 text-sm text-white font-extrabold bg-rose-400 rounded flex justify-center items-center cursor-pointer">Submit</div>
         </div>
     );
 }

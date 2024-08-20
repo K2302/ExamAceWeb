@@ -996,7 +996,7 @@ const Test = () => {
     }
 
     return (
-        <div className='w-[1280px] mx-auto flex flex-row relative'>
+        <div className='flex flex-row w-[1280px] mx-auto'>
             {
                 isOpen && (
                     <div className='fixed z-50 w-screen h-screen left-0 right-0 bg-slate-500/50 flex justify-center items-center'>
@@ -1014,7 +1014,7 @@ const Test = () => {
                     </div>
                 )
             }
-            <div className='w-2/3 border-l-2 relative'>
+            <div className='w-3/4 border-l-2 relative'>
                 <div className='w-full sticky top-0 right-0'>
                     <TestTopbar currentQuestionIndex={currentQuestionIndex} timeLeft={timeLeft} />
                 </div>
@@ -1031,7 +1031,7 @@ const Test = () => {
                     />
                 </div>
             </div>
-            <div className='w-1/3 sticky top-0 right-0 h-screen border-l-2 border-r-2'>
+            <div className='w-1/4 sticky top-0 right-0 h-screen border-l-2 border-r-2'>
                 <TestSidebar
                     answerStatus={answerStatus}
                     setCurrentQuestionIndex={setCurrentQuestionIndex}

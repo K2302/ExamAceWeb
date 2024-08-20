@@ -37,7 +37,7 @@ const Sidebar = () => {
             </div>
             <div className="h-16 p-3 border-t-2 flex flex-row justify-center items-center gap-1.5 cursor-pointer">
                 <img src={images.out} alt="signout" className="w-5 h-5" />
-                <div className="text-sm text-red-500 font-extrabold">Sign Out</div>
+                <div className="text-sm text-red-500 font-extrabold">log out</div>
             </div>
         </div>
     )

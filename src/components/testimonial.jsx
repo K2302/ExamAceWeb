@@ -5,9 +5,9 @@ const Testimonial = () => {
     <div className="my-5 flex flex-row justify-between">
       <div className="flex flex-col w-1/3 justify-center">
         <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-4xl font-bold">
-          India's #1
+          INDIA's #19
         </div>
-        <div className="text-lg font-bold text-slate-500">
+        <div className="text-base font-bold text-slate-500">
           Platform For Free Mock Test | PYQ Test
         </div>
       </div>
