@@ -26,11 +26,16 @@ import Profile from '../assets/icons/profile.svg'
 import Notice from '../assets/icons/notice.png'
 import List from '../assets/icons/list.png'
 import Pin from '../assets/icons/pin.png'
+import Badge from '../assets/icons/badge.png'
+import Money from '../assets/icons/money.png'
+
+import User from '../assets/user/profile.jpg'
 
 import ChemistryBackground from '../assets/chemistry/background.jpg'
 import PhysicsBackground from '../assets/physics/background.jpg'
 import MathBackground from '../assets/math/background.jpg'
 import PYQ from '../assets/background/pyq.jpg'
+
 
 export default
     {
@@ -62,8 +67,13 @@ export default
         Notice,
         List,
         Pin,
+        Badge,
+        Money,
+
+        User,
+
         ChemistryBackground,
         PhysicsBackground,
         MathBackground,
-        PYQ
+        PYQ,
     }
