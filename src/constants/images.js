@@ -25,6 +25,7 @@ import check from '../assets/icons/check.svg'
 import Profile from '../assets/icons/profile.svg'
 import Notice from '../assets/icons/notice.png'
 import List from '../assets/icons/list.png'
+import Pin from '../assets/icons/pin.png'
 
 import ChemistryBackground from '../assets/chemistry/background.jpg'
 import PhysicsBackground from '../assets/physics/background.jpg'
@@ -60,6 +61,7 @@ export default
         check,
         Notice,
         List,
+        Pin,
         ChemistryBackground,
         PhysicsBackground,
         MathBackground,
