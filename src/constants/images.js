@@ -30,6 +30,7 @@ import Badge from '../assets/icons/badge.png'
 import Money from '../assets/icons/money.png'
 import Close from '../assets/icons/close.png'
 import Bookmark from '../assets/icons/bookmark.png'
+import Time from '../assets/icons/time.png'
 
 import User from '../assets/user/profile.jpg'
 
@@ -73,6 +74,7 @@ export default
         Money,
         Close,
         Bookmark,
+        Time,
 
         User,
 
