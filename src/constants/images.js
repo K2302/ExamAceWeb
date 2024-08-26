@@ -22,12 +22,14 @@ import out from '../assets/icons/out.png'
 import notification from '../assets/icons/notification.png'
 import dot from '../assets/icons/dot.svg'
 import check from '../assets/icons/check.svg'
-import Profile from '../assets/icons/profile.svg'
+import Profile from '../assets/icons/profile.png'
 import Notice from '../assets/icons/notice.png'
 import List from '../assets/icons/list.png'
 import Pin from '../assets/icons/pin.png'
 import Badge from '../assets/icons/badge.png'
 import Money from '../assets/icons/money.png'
+import Close from '../assets/icons/close.png'
+import Bookmark from '../assets/icons/bookmark.png'
 
 import User from '../assets/user/profile.jpg'
 
@@ -69,6 +71,8 @@ export default
         Pin,
         Badge,
         Money,
+        Close,
+        Bookmark,
 
         User,
 

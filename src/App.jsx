@@ -20,6 +20,7 @@ import Blog from "./pages/home/blog";
 import PYQ from "./pages/dashboard/pyq";
 import MobileView from "./pages/mobile/mobile-view";
 import { useEffect } from "react";
+import Practice from "./pages/dashboard/practice";
 
 const HomeLayout = () => {
   return (
@@ -92,6 +93,7 @@ const App = () => {
         <Route path="profile" element={<ProfileDasboard />} />
         <Route path="course/pyq" element={<PYQ />} />
         <Route path="course/:id" element={<SubjectDashboard />} />
+        <Route path="course/:id/:id" element={<Practice />} />
       </Route>
       <Route path="test/:id" element={<Test />} />
       <Route path="/mobile" element={<MobileView />} />
