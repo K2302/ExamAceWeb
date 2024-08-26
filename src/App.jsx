@@ -21,6 +21,7 @@ import PYQ from "./pages/dashboard/pyq";
 import MobileView from "./pages/mobile/mobile-view";
 import { useEffect } from "react";
 import Practice from "./pages/dashboard/practice";
+import ScrollToTop from "./components/scrollToTop";
 
 const HomeLayout = () => {
   return (
@@ -75,29 +76,32 @@ const App = () => {
 
 
   return (
-    <Routes>
-      <Route path="/" element={<HomeLayout />}>
-        <Route index element={<Home />} />
-        <Route path="course" element={<Course />} />
-        <Route path="leaderboard" element={<LeaderBoard />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="about" element={<About />} />
-        <Route path="register" element={<Register />} />
-        <Route path="login" element={<Login />} />
-      </Route>
-      <Route path="dashboard" element={<DashboardLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="course" element={<CourseDashboard />} />
-        <Route path="leaderboard" element={<LeaderBoardDashboard />} />
-        <Route path="blog" element={<BlogDashboard />} />
-        <Route path="profile" element={<ProfileDasboard />} />
-        <Route path="course/pyq" element={<PYQ />} />
-        <Route path="course/:id" element={<SubjectDashboard />} />
-        <Route path="course/:id/:id" element={<Practice />} />
-      </Route>
-      <Route path="test/:id" element={<Test />} />
-      <Route path="/mobile" element={<MobileView />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomeLayout />}>
+          <Route index element={<Home />} />
+          <Route path="course" element={<Course />} />
+          <Route path="leaderboard" element={<LeaderBoard />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="about" element={<About />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+        <Route path="dashboard" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="course" element={<CourseDashboard />} />
+          <Route path="leaderboard" element={<LeaderBoardDashboard />} />
+          <Route path="blog" element={<BlogDashboard />} />
+          <Route path="profile" element={<ProfileDasboard />} />
+          <Route path="course/pyq" element={<PYQ />} />
+          <Route path="course/:id" element={<SubjectDashboard />} />
+          <Route path="course/:id/:id" element={<Practice />} />
+        </Route>
+        <Route path="test/:id" element={<Test />} />
+        <Route path="/mobile" element={<MobileView />} />
+      </Routes>
+    </>
   );
 };
 
