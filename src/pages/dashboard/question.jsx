@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import images from "../../constants/images"
 
 const Question = ({ selectedQuestion, handleModalClose }) => {
@@ -38,8 +39,12 @@ const Question = ({ selectedQuestion, handleModalClose }) => {
     };
 
     return (
-        <div className="fixed z-50 top-0 left-0 w-screen h-screen flex justify-center items-center">
-            <div className="w-[640px] bg-white border-2 rounded flex flex-col">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed z-50 top-0 left-0 w-screen h-screen bg-white/75 flex justify-center items-center"
+        >
+            <div className="w-[1000px] bg-white border-2 rounded flex flex-col">
                 <div className="flex flex-row justify-between items-center p-3 border-b-2">
                     <div className="flex flex-row justify-center items-center gap-1.5">
                         <div className="text-xl text-rose-500 font-extrabold">
@@ -85,7 +90,7 @@ const Question = ({ selectedQuestion, handleModalClose }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

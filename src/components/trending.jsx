@@ -33,7 +33,7 @@ const Trending = () => {
               viewport={{ once: true }}
               className="transition-transform duration-300 hover:scale-105 w-1/5 h-64 cursor-pointer flex flex-col gap-3 m-3"
               key={item.chapter}
-              onClick={() => handleClick(`/practice/${item.testId}`)}
+              onClick={() => handleClick(`/dashboard/course/${item.category}/${item.chapter}`)}
             >
               <div className='w-full h-32'>
                 <img src={item.image} alt="background" className="rounded w-full h-full object-cover" />

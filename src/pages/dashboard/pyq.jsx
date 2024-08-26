@@ -2,53 +2,28 @@ import { motion } from "framer-motion"
 import images from "../../constants/images";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Select from "react-select"
 
 
 const Years = [
-    { year: '2000', id: '2000' },
-    { year: '2001', id: '2001' },
-    { year: '2002', id: '2002' },
-    { year: '2003', id: '2003' },
-    { year: '2004', id: '2004' },
-    { year: '2005', id: '2005' },
-    { year: '2006', id: '2006' },
-    { year: '2007', id: '2007' },
-    { year: '2008', id: '2008' },
-    { year: '2009', id: '2009' },
-    { year: '2010', id: '2010' },
-    { year: '2011', id: '2011' },
-    { year: '2012', id: '2012' },
-    { year: '2013', id: '2013' },
-    { year: '2014', id: '2014' },
-    { year: '2015', id: '2015' },
-    { year: '2016', id: '2016' },
-    { year: '2017', id: '2017' },
-    { year: '2018', id: '2018' },
-    { year: '2019', id: '2019' },
-    { year: '2020', id: '2020' },
-    { year: '2021', id: '2021' },
-    { year: '2022', id: '2022' },
-    { year: '2023', id: '2023' },
-    { year: '2024', id: '2024' }
+    { value: '2000', label: '2000' },
+    { value: '2001', label: '2001' },
+    { value: '2002', label: '2002' },
+    { value: '2003', label: '2003' },
+    { value: '2004', label: '2004' },
+    { value: '2005', label: '2005' },
 ];
 
-const Attempt = [
+
+const Exam = [
     {
-        number: 'Attempt 1',
-        id: 1
+        value: 'mains',
+        label: 'Mains'
     },
     {
-        number: 'Attempt 2',
-        id: 2
-    },
-    {
-        number: 'Attempt 3',
-        id: 3
-    },
-    {
-        number: 'Attempt 4',
-        id: 4
-    },
+        value: 'advanced',
+        label: 'Advanced'
+    }
 ];
 
 const Data = [
@@ -67,13 +42,28 @@ const PYQ = () => {
     const navigate = useNavigate()
 
     const [selectedYear, setSelectedYear] = useState('2024')
-    const [selectedAttempt, setSelectedAttempt] = useState(1)
+    const [selectedExamType, setSelectedExamType] = useState(1)
 
     const FiteredData = Data.filter((item) => {
         const yearMatch = item.date.startsWith(selectedYear)
         // const attemptMatch = selectedAttempt === 1
         return yearMatch
     })
+
+    const CustomStyle = {
+        control: (provided) => ({
+            ...provided,
+            width: '144px',
+            fontSize: '16px',
+            borderWidth: '2px',
+            borderColor: '#e5e7eb'
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            color: state.isSelected ? '#fff' : '#f43f5e',
+            backgroundColor: state.isSelected ? '#f43f5e' : '#fff'
+        })
+    }
 
 
     const handleClick = (route) => {
@@ -91,7 +81,7 @@ const PYQ = () => {
                 <div className="flex flex-row justify-between items-center gap-3">
                     <div className="text-base text-slate-500 font-extrabold">Filter By : </div>
                     <div className="flex flex-row gap-3">
-                        <select
+                        {/* <select
                             value={selectedYear}
                             onChange={(e) => setSelectedYear(e.target.value)}
                             className="p-1 w-32 bg-rose-50 focus:outline-none rounded text-sm text-slate-500">
@@ -100,17 +90,21 @@ const PYQ = () => {
                                     <option key={item.id} value={item.id}>{item.year}</option>
                                 ))
                             }
-                        </select>
-                        <select
-                            value={selectedAttempt}
-                            onChange={(e) => setSelectedAttempt(e.target.value)}
-                            className="p-1 w-32 bg-rose-50 focus:outline-none rounded text-sm text-slate-500">
-                            {
-                                Attempt.map((item) => (
-                                    <option key={item.id} value={item.id}>{item.number}</option>
-                                ))
-                            }
-                        </select>
+                        </select> */}
+                        <Select
+                            styles={CustomStyle}
+                            options={Years}
+                            placeholder="Year"
+                            isMulti={false}
+                            onChange={(option) => setSelectedYear(option.year)}
+                        />
+                        <Select
+                            styles={CustomStyle}
+                            options={Exam}
+                            placeholder="Exam"
+                            isMulti={false}
+                            onChange={(option) => setSelectedExamType(option.type)}
+                        />
                     </div>
                 </div>
             </div>
