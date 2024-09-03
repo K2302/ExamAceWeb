@@ -9,7 +9,9 @@ const BlogDashboard = () => {
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
                 viewport={{ once: true }}
             >
-                <img src={images.Logo} className="w-96 h-96" />
+                <div className="w-72 h-72 mt-5">
+                    <img src={images.Laditya} className="w-full h-full object-cover rounded-full" />
+                </div>
             </motion.div>
         </div>
     )

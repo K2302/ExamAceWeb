@@ -39,6 +39,8 @@ import PhysicsBackground from '../assets/physics/background.jpg'
 import MathBackground from '../assets/math/background.jpg'
 import PYQ from '../assets/background/pyq.jpg'
 
+import Laditya from '../assets/laditya.jpg'
+
 
 export default
     {
@@ -82,4 +84,6 @@ export default
         PhysicsBackground,
         MathBackground,
         PYQ,
+
+        Laditya,
     }
