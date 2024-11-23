@@ -25,7 +25,7 @@
 This platform provides JEE aspirants with a comprehensive, free resource to excel in their exams.
 <br />
 
-### Ket Features
+### Ket Features of ExamACE
 - Mock Tests: Access to mock tests from JEE Mains and Advanced papers dating back to 2000.
 
 - Chapter-Wise Practice: Practice previous year questions (PYQs) for every chapter in Physics, Chemistry, and Mathematics.
